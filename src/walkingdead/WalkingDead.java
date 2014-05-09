@@ -6,6 +6,8 @@
 
 package walkingdead;
 
+import byui.cit260.walkingDead.model.Player;
+
 /**
  *
  * @author rtacklingman50
@@ -16,7 +18,13 @@ public class WalkingDead {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Player playerOne = new Player();
+        
+        playerOne.setName("Fred Flinstone");
+        playerOne.setBestTime(7.00);
+        
+        String playerInfo = playerOne.toString();
+        System.out.println(playerInfo);
     }
     
 }
