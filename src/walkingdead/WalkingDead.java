@@ -6,7 +6,7 @@
 
 package walkingdead;
 
-import byui.cit260.walkingDead.model.Player;
+import byui.cit260.walkingDead.model.Game;
 
 /**
  *
@@ -18,13 +18,12 @@ public class WalkingDead {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Player playerOne = new Player();
+        Game gameOne = new Game();
         
-        playerOne.setName("Fred Flinstone");
-        playerOne.setBestTime(7.00);
+        gameOne.setName("Fred Flinstone");
+        gameOne.setBestTime(7.00);
         
-        String playerInfo = playerOne.toString();
-        System.out.println(playerInfo);
+        String gameInfo = gameOne.toString();
+        System.out.println(gameInfo);
     }
-    
 }
