@@ -10,7 +10,7 @@ import java.io.Serializable;
 import java.util.Objects;
 
 /**
- *
+ * Character of the game
  * @author laurenkorpacz
  */
 public class Actor implements Serializable{

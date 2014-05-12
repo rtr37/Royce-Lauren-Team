@@ -9,7 +9,8 @@ package byui.cit260.walkingDead.model;
 import java.io.Serializable;
 import java.util.Objects;
 /**
- *
+ * 
+ * 
  * @author laurenkorpacz
  */
 public class Game implements Serializable{
