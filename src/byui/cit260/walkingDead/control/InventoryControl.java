@@ -11,20 +11,20 @@ package byui.cit260.walkingDead.control;
  * @author rtacklingman50
  */
 public class InventoryControl {
-    public double calcCompressionofCylinder(double height, double diameter){
+    public double calcCompressionofCylinder(double length, double diameter){
     
-    if (height < 1 && height > 10) {
-                return -1;
+    if (length < 1 && length > 10) {
+         return -1;
     }
             
     if (diameter < 1 && diameter > 8) {
-                return -1;
+         return -1;
     }
     double radius = diameter /2;
-    double volume = (Math.PI * Math.pow(radius,2) * height);
+    double volume = (Math.PI * Math.pow(radius,2) * length);
     
-    return volume;
-            
-            }
-    
+    double compression = (Math.PI * Math.pow(diameter,2) * length+volume) / volume;
+     
+    return compression;
     }
+}
