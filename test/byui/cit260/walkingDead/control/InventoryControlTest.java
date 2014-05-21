@@ -23,15 +23,38 @@ public class InventoryControlTest {
      */
     @Test
     public void testCalcCompressionofCylinder() {
-        System.out.println("calcCompressionofCylinder");
-        double length = 0.0;
-        double diameter = 0.0;
+        System.out.println("calcCompressionofCylinder1");
+        double length = 7.0;
+        double diameter = 6.0;
         InventoryControl instance = new InventoryControl();
-        double expResult = 0.0;
+        double expResult = 5.0;
         double result = instance.calcCompressionofCylinder(length, diameter);
-        assertEquals(expResult, result, 0.0);
+        assertEquals(expResult, result, .01);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+      
     }
+    @Test
+    public void testCalcCompressionofCylinder2() {
+        System.out.println("calcCompressionofCylinder2");
+        double length = 11.0;
+        double diameter = 6.0;
+        InventoryControl instance = new InventoryControl();
+        double expResult = -1.0;
+        double result = instance.calcCompressionofCylinder(length, diameter);
+        assertEquals(expResult, result, .01);
+        // TODO review the generated test code and remove the default call to fail.
     
+    }
+  @Test
+    public void testCalcCompressionofCylinder3() {
+        System.out.println("calcCompressionofCylinder3");
+        double length = 8.0;
+        double diameter = -1.0;
+        InventoryControl instance = new InventoryControl();
+        double expResult = -1.0;
+        double result = instance.calcCompressionofCylinder(length, diameter);
+        assertEquals(expResult, result, .01);
+        // TODO review the generated test code and remove the default call to fail.
+    
+    }
 }
