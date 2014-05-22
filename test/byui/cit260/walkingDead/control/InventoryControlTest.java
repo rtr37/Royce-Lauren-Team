@@ -57,4 +57,24 @@ public class InventoryControlTest {
         // TODO review the generated test code and remove the default call to fail.
     
     }
+    
+   
+    
+
+    /**
+     * Test of calcVolumeOfWater method, of class InventoryControl.
+     */
+    @Test
+    public void testCalcVolumeOfWater() {
+        System.out.println("calcVolumeOfWater");
+        double height = 6.0;
+        double width = 10.0;
+        double length = 50.0;
+        InventoryControl instance = new InventoryControl();
+        double expResult = 3000.0;
+        double result = instance.calcVolumeOfWater(height, width, length);
+        assertEquals(expResult, result, 0.01);
+        // TODO review the generated test code and remove the default call to fail.
+        
+    }
 }
