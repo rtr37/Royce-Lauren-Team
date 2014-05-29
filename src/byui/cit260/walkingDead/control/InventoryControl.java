@@ -44,4 +44,5 @@ public class InventoryControl {
         
     }
 
+    public double calcElectricPower(double)
 }
