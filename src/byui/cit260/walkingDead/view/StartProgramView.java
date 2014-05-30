@@ -28,10 +28,10 @@ public class StartProgramView {
         }
 
         Player player = new Player();
-        player.setname(playersName);
-        Controls.getProgramControl().setPlayer(player);
+        player.setName(playersName);
+        ProgramControl.getProgramControl().setPlayer(player);
 
-        this.displayWelcomeMessages(playersName);
+        this.displayWelcomeMessage(playersName);
 
         MainMenuView mainMenuView = new MainMenuView();
         mainMenuView.displayMainMenu();
@@ -65,7 +65,7 @@ public class StartProgramView {
     public String getPlayersName() {
         boolean valid = false;
         String playersName = null;
-        Scanner keyboard = new Scanner(system.in);
+        Scanner keyboard = new Scanner(System.in);
 
         while (!valid) {
 
