@@ -77,4 +77,46 @@ public class InventoryControlTest {
         // TODO review the generated test code and remove the default call to fail.
         
     }
+
+    
+    
+    
+    
+    /**
+     * Test of calcVoltage method, of class InventoryControl.
+     */
+    @Test
+    public void testCalcVoltage() {
+        System.out.println("calcVoltage");
+        double amperage = 4.0;
+        double resistance = 5.0;
+        InventoryControl instance = new InventoryControl();
+        double expResult = 20.0;
+        double result = instance.calcVoltage(amperage, resistance);
+        assertEquals(expResult, result, 0.01);
+        // TODO review the generated test code and remove the default call to fail.
+        
+    }
+    
+     @Test
+    public void testCalcVoltage2() {
+        System.out.println("calcVoltage2");
+        double amperage = -1.0;
+        double resistance = 5.0;
+        InventoryControl instance = new InventoryControl();
+        double expResult = -1.0;
+        double result = instance.calcVoltage(amperage, resistance);
+        assertEquals(expResult, result, 0.01);
+    }
+    
+     @Test
+    public void testCalcVoltage3() {
+        System.out.println("calcVoltage3");
+        double amperage = 4.0;
+        double resistance = -1.0;
+        InventoryControl instance = new InventoryControl();
+        double expResult = -1.0;
+        double result = instance.calcVoltage(amperage, resistance);
+        assertEquals(expResult, result, 0.01);
+    }
 }

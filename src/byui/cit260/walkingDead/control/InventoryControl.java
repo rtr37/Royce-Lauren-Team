@@ -43,6 +43,19 @@ public class InventoryControl {
         return volume;
         
     }
-
-    public double calcElectricPower(double)
+    public double calcVoltage (double amperage, double resistance){
+        
+       if (amperage < 0){
+          return -1; 
+       }
+       if (resistance < 0){
+           return -1;
+       }
+       
+       double voltage = amperage * resistance;
+       
+       return voltage;
+    
+    }
+    
 }
