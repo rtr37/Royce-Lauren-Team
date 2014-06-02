@@ -6,7 +6,9 @@
 
 package walkingdead;
 
-import byui.cit260.walkingDead.model.Game;
+import byui.cit260.walkingDead.model.*;
+import byui.cit260.walkingDead.view.*;
+
 
 /**
  *
@@ -19,7 +21,7 @@ public class WalkingDead {
      */
     public static void main(String[] args) {
         Game gameOne = new Game();
-        
+        new StartProgramView().displayBanner();
         gameOne.setName("Fred Flinstone");
         gameOne.setBestTime(7.00);
         

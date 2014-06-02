@@ -11,7 +11,7 @@ package byui.cit260.walkingDead.view;
  * @author rtacklingman50
  */
 
-import byui.cit260.walkingDead.control.Controls;
+import byui.cit260.walkingDead.control.InventoryControl;
 import byui.cit260.walkingDead.control.ProgramControl;
 import java.util.Scanner;
 
@@ -45,7 +45,8 @@ public class MainMenuView {
                 helpMenu.displayHelpMenu();
                 break;
             case 'S':
-                Controls.getProgramControl().saveGame();
+                ProgramControl saveGame = new ProgramControl();
+                saveGame.saveGame();
                 break;
             case 'E':
                 return;

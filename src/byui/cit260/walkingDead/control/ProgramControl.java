@@ -15,4 +15,8 @@ public class ProgramControl {
         System.out.println("\n*** saveGame stub function called***");
     }
     
+    public void setPlayer(){
+        System.out.println("\n*** setPlayer stub function called***");
+    }
+    
 }
