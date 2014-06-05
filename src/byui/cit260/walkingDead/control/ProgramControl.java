@@ -6,17 +6,41 @@
 
 package byui.cit260.walkingDead.control;
 
+import byui.cit260.walkingDead.model.*;
+
+
 /**
  *
  * @author rtacklingman50
  */
 public class ProgramControl {
+    
+    private Game game;
+    private Player player;
+    
+    public Game getGame(){
+        return game;
+    }
+    
+    public void setGame(Game game){
+        this.game = game;
+    }
+    
+    public Player getPlayer(){
+        return player;
+    }
+    
+    public void setPlayer(Player player){
+        this.player = player;
+    }
+    
+    public Player createPlayer(String name){
+        player = new Player();
+        player.setName(name);
+        return player;
+    }
+    
     public void saveGame(){
-        System.out.println("\n*** saveGame stub function called***");
+        throw new UnsupportedOperationException("Not Supported");
     }
-    
-    public void setPlayer(){
-        System.out.println("\n*** setPlayer stub function called***");
-    }
-    
 }
