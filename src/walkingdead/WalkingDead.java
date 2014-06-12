@@ -16,6 +16,17 @@ import byui.cit260.walkingDead.view.*;
  * @author rtacklingman50
  */
 public class WalkingDead {
+    
+    public static Game currentGame;
+
+    public static Game getCurrentGame() {
+        return currentGame;
+    }
+
+    public static void setCurrentGame(Game currentGame) {
+        WalkingDead.currentGame = currentGame;
+    }
+    
 
     /**
      * @param args the command line arguments
@@ -28,5 +39,9 @@ public class WalkingDead {
         
         String gameInfo = gameOne.toString();
         System.out.println(gameInfo);
+    }
+
+    public static void setCurrentGame(byui.cit260.walkingDead.control.Game game) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
