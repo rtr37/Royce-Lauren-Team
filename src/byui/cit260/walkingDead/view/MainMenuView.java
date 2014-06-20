@@ -16,47 +16,64 @@ import byui.cit260.walkingDead.control.ProgramControl;
 import java.util.Scanner;
 
 
-public class MainMenuView {
+public class MainMenuView extends View {
     
-    private static final String menu = "\n\n"
-            + "G - Start Game\n"
-            + "H - Get help on how to do to this\n"
-            + "S - Save\n"
-            + "E - Exit";
+    private String menu = "\n\n"
+            + "\n------------------------------------"
+            + "\n|Main Menu"
+            + "\n------------------------------------"
+            + "\nN - Start Game"
+            + "\nH - Get help on how to do to this"
+            + "\nS - Save game"
+            + "\nQ - Quit"
+            + "\n------------------------------------";
+
+    public MainMenuView() {
+        super("\n"
+                + "\n-------------------------"
+                + "\n | Main Menu"
+                + "\n-------------------------"
+                + "\nN - Start new game"
+                + "\nG - Get and start saved game"
+                + "\nH - Get help on how to play the game"
+                + "\nS - Save game"
+                + "\nQ - Quit"
+                + "\n-------------------------");
+    }
     
-    public void displayMainMenu(){
-        boolean invalidSelection = true;
-        Scanner keyboard = new Scanner(System.in);
+    
+    @Override 
+    public void doAction(String value) {
+        char choice = value.toUpperCase().charAt(0);
         
-        do{
-            System.out.println(MainMenuView.menu);
-            String value = keyboard.nextLine();
-            
-            value = value.trim().toUpperCase();
-            char selection = value.charAt(0);
-            
-        switch (selection) {
-            case 'G':
-                GameMenuView gameMenu = new GameMenuView();
-                gameMenu.displayGameMenu();
+        switch (choice){
+            case 'N': // create and start a new game
+                this.startNewGame();
                 break;
-            case 'H':
-                HelpMenuView helpMenu = new HelpMenuView();
-                helpMenu.displayHelpMenu();
+            case 'G': // get and start an exisiting game
+                this.startExistingGame();
                 break;
-            case 'S':
-                ProgramControl saveGame = new ProgramControl();
-                saveGame.saveGame();
+            case 'H': // display the help menu
+                this.displayHelpMenu();
                 break;
-            case 'E':
-                return;
-            
-            default:
-                System.out.println("Invalid Selection");
-            
+                case'E': // Exit the program
+                    return;
+                default:
+                    System.out.println("n*** Invalid selection *** Try again");
+                    break;
         }
-        
-        } while(invalidSelection);
+    }
+
+    private void startNewGame() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void startExistingGame() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void displayHelpMenu() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }
