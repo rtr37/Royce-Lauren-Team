@@ -8,7 +8,7 @@ package byui.cit260.walkingDead.view;
 
 /**
  *
- * @author rtacklingman50
+ * @author Lauren
  */
 
 import byui.cit260.walkingDead.control.InventoryControl;
